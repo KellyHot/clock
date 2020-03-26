@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #807b7b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.h1 {
+  text-align: center;
+  font: 700 36px/1em "Roboto", sans-serif;
+  color: #ccc;
+}
+
+.canvas {
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.clock {
+  position: relative;
+  display: inline-block;
+  margin-top: 50px;
+}
+
+.clock::after {
+  border-radius: 50%;
+  background-color: #ccc;
+  content: "";
+  position: absolute;
+  height: 90%;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.date {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+.textDate {
+  color: #000;
+  font: 400 20px/1em "Roboto", sans-serif;
+}
+
+.textDate + .textDate {
+  margin-left: 5px;
+}
+
+.current {
+  margin-top: 50px;
+}
